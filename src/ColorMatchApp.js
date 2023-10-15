@@ -1,4 +1,5 @@
 import "./ColorMatchApp.css";
+import NumberButton from "./components/NumberButton";
 
 function ColorMatchApp() {
   return (
@@ -8,12 +9,12 @@ function ColorMatchApp() {
       </div>
       <div className='target'>42</div>
       <div className='challenge-numbers'>
-        <div className='number'>8</div>
-        <div className='number'>5</div>
-        <div className='number'>12</div>
-        <div className='number'>13</div>
-        <div className='number'>5</div>
-        <div className='number'>16</div>
+        <NumberButton number={8} />
+        <NumberButton number={5} />
+        <NumberButton number={12} />
+        <NumberButton number={13} />
+        <NumberButton number={5} />
+        <NumberButton number={16} />
       </div>
       <div className='footer'>
         <div className='timer-value'>15</div>
