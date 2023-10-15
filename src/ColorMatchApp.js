@@ -1,4 +1,5 @@
 import "./ColorMatchApp.css";
+import Footer from "./components/Footer";
 import NumberButton from "./components/NumberButton";
 
 function ColorMatchApp() {
@@ -16,10 +17,7 @@ function ColorMatchApp() {
         <NumberButton number={5} />
         <NumberButton number={16} />
       </div>
-      <div className='footer'>
-        <div className='timer-value'>15</div>
-        <button>Start</button>
-      </div>
+      <Footer timerValue={15} />
     </div>
   );
 }
