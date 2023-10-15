@@ -1,24 +1,22 @@
 import "./ColorMatchApp.css";
+import Footer from "./components/Footer";
+import Help from "./components/Help";
+import NumberButton from "./components/NumberButton";
 
 function ColorMatchApp() {
   return (
     <div className='game'>
-      <div className='help'>
-        Pick 4 numbers that sum to the target in 15 seconds
-      </div>
+      <Help />
       <div className='target'>42</div>
       <div className='challenge-numbers'>
-        <div className='number'>8</div>
-        <div className='number'>5</div>
-        <div className='number'>12</div>
-        <div className='number'>13</div>
-        <div className='number'>5</div>
-        <div className='number'>16</div>
+        <NumberButton number={8} />
+        <NumberButton number={5} />
+        <NumberButton number={12} />
+        <NumberButton number={13} />
+        <NumberButton number={5} />
+        <NumberButton number={16} />
       </div>
-      <div className='footer'>
-        <div className='timer-value'>15</div>
-        <button>Start</button>
-      </div>
+      <Footer timerValue={15} />
     </div>
   );
 }
