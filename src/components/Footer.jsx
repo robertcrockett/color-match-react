@@ -1,3 +1,8 @@
+/**
+ * 
+ * @param {timerValue} timerValue - The value of the timer 
+ * @returns A JSX object representing the footer of the application
+ */
 function Footer({ timerValue }) {
   return (
     <div className='footer'>
