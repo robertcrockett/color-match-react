@@ -3,6 +3,10 @@ import Footer from "./components/Footer";
 import Help from "./components/Help";
 import NumberButton from "./components/NumberButton";
 
+/**
+ * 
+ * @returns A JSX object representing the Color Match application
+ */
 function ColorMatchApp() {
   return (
     <div className='game'>
