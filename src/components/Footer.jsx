@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 /**
  * 
  * @param {timerValue} timerValue - The value of the timer 
@@ -13,3 +15,7 @@ function Footer({ timerValue }) {
 }
 
 export default Footer;
+
+Footer.PropTypes = {
+  timerValue: PropTypes.number.isRequired,
+};
