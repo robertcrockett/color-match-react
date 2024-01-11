@@ -8,8 +8,8 @@ import PropTypes from "prop-types";
 function Footer({ timerValue }) {
   return (
     <div className='footer'>
-      <div className='timer-value'>{timerValue}</div>
-      <button>Start</button>
+      <div className='timer-value' data-testid='timer'>{timerValue}</div>
+      <button data-testid='start_buttom' >Start</button>
     </div>
   );
 }
