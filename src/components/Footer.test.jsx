@@ -14,3 +14,17 @@ describe("Renders the Footer component when the Game is in the initial state", (
     expect(footerStartButton).toHaveTextContent("Start");
   });
 });
+
+describe("Validate that the start button fires and event when clicked", () => {
+  it("Renders the Footer component along with the start button", () => {
+    render(<Footer timerValue={15} />);
+
+    const footerStartButton = screen.queryByTestId("start_buttom");
+    expect(footerStartButton).toHaveTextContent("Start");
+
+    // Create a spy for the start button click event
+    const startClickSpy = vi.spyOn(footerStartButton, "click");
+    footerStartButton.click();
+    expect(startClickSpy).toHaveBeenCalledOnce();
+  });
+});
