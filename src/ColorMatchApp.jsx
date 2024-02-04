@@ -2,12 +2,19 @@ import "./ColorMatchApp.css";
 import Footer from "./components/Footer";
 import Help from "./components/Help";
 import NumberButton from "./components/NumberButton";
+import useCountdown from "./hooks/useCountdown";
 
 /**
  * 
  * @returns A JSX object representing the Color Match application
  */
 function ColorMatchApp() {
+  const { countdown } = useCountdown(15);
+
+  const onStartClick = () => {
+    console.log('Start button clicked')
+  }
+
   return (
     <div className='game'>
       <Help />
@@ -20,7 +27,7 @@ function ColorMatchApp() {
         <NumberButton number={5} />
         <NumberButton number={16} />
       </div>
-      <Footer timerValue={15} />
+      <Footer timerValue={countdown} onStartClick={onStartClick} />
     </div>
   );
 }

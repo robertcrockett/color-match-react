@@ -19,7 +19,7 @@ describe("Validate that the start button fires and event when clicked", () => {
   it("Renders the Footer component along with the start button", () => {
     render(<Footer timerValue={15} />);
 
-    const footerStartButton = screen.queryByTestId("start_buttom");
+    const footerStartButton = screen.queryByTestId("start_button");
     expect(footerStartButton).toHaveTextContent("Start");
 
     // Create a spy for the start button click event
