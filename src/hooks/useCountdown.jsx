@@ -11,8 +11,6 @@ const useCountdown = (initialValue) => {
     return () => clearInterval(interval);
   }, [countdown]);
 
-  console.log("useCountdown: " + countdown)
-
   return countdown;
 };
 
