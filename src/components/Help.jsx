@@ -1,3 +1,5 @@
+import React from 'react';
+
 /**
  *
  * @returns A JSX object representing the help text of the application
@@ -10,4 +12,4 @@ function Help() {
   );
 }
 
-export default Help;
+export const MemoizedHelp = React.memo(Help);
