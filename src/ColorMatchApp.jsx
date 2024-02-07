@@ -1,7 +1,7 @@
 import "./ColorMatchApp.css";
 import Footer from "./components/Footer";
-import Help from "./components/Help";
-import NumberButton from "./components/NumberButton";
+import { MemoizedHelp } from "./components/Help";
+import { MemoizedNumberButton } from "./components/NumberButton";
 import useCountdown from "./hooks/useCountdown";
 
 /**
@@ -10,7 +10,6 @@ import useCountdown from "./hooks/useCountdown";
  */
 function ColorMatchApp() {
   const countdown = useCountdown(15);
-  console.log("ColorMatchApp: " + countdown)
 
   const onStartClick = () => {
     console.log('Start button clicked')
@@ -18,15 +17,15 @@ function ColorMatchApp() {
 
   return (
     <div className='game'>
-      <Help />
+      <MemoizedHelp />
       <div className='target'>42</div>
       <div className='challenge-numbers'>
-        <NumberButton number={8} />
-        <NumberButton number={5} />
-        <NumberButton number={12} />
-        <NumberButton number={13} />
-        <NumberButton number={5} />
-        <NumberButton number={16} />
+        <MemoizedNumberButton number={8} />
+        <MemoizedNumberButton number={5} />
+        <MemoizedNumberButton number={12} />
+        <MemoizedNumberButton number={13} />
+        <MemoizedNumberButton number={5} />
+        <MemoizedNumberButton number={16} />
       </div>
       <Footer timerValue={countdown} onStartClick={onStartClick} />
     </div>
