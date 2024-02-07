@@ -5,11 +5,13 @@ const useCountdown = (initialValue) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCountdown((prevCountdown) => prevCountdown - 1);
+      setCountdown((countdown) => countdown - 1);
     }, 1000);
 
     return () => clearInterval(interval);
   }, [countdown]);
+
+  console.log("useCountdown: " + countdown)
 
   return countdown;
 };

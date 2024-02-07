@@ -9,7 +9,8 @@ import useCountdown from "./hooks/useCountdown";
  * @returns A JSX object representing the Color Match application
  */
 function ColorMatchApp() {
-  const { countdown } = useCountdown(15);
+  const countdown = useCountdown(15);
+  console.log("ColorMatchApp: " + countdown)
 
   const onStartClick = () => {
     console.log('Start button clicked')
