@@ -1,15 +1,16 @@
-const jest = require('eslint-plugin-jest')
-const babel = require('@babel/eslint-parser')
+import jest from 'eslint-plugin-jest'
+import babel from '@babel/eslint-parser'
+import js from '@eslint/js'
 
 // eslint.config.js
-module.exports = [
-  {
-    ...require('@eslint/js').configs.recommended,
+export default [
+    js.configs.recommended,
+    {
     ignores: [
       '!.*',
       '**/assets/.*',
       '**/node_modules/.*',
-      '**/dist/.*',
+      './dist/**',
       '**/coverage/.*',
       '*.json',
       '**/.git/.*'
