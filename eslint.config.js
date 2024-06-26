@@ -4,17 +4,8 @@ import js from '@eslint/js'
 
 // eslint.config.js
 export default [
-    js.configs.recommended,
-    {
-    ignores: [
-      '!.*',
-      '**/assets/.*',
-      '**/node_modules/.*',
-      './dist/**',
-      '**/coverage/.*',
-      '*.json',
-      '**/.git/.*'
-    ],
+  js.configs.recommended,
+  {
     rules: {
       camelcase: 'off',
       'eslint-comments/no-use': 'off',
@@ -41,5 +32,11 @@ export default [
         }
       }
     }
-  }
+  },
+  {
+    ignores: [
+    'dist/',
+    'coverage/',
+    'node_modules/'
+  ]}
 ]
