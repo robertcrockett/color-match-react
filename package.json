@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "npx eslint -c ./eslint.config.js",
+    "inspect": "npx eslint --inspect-config",
     "preview": "vite preview",
     "test": "vitest",
     "coverage": "vitest run --coverage"
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.24.7",
     "@eslint/js": "^9.5.0",
+    "@eslint/config-inspector": "^0.5.0",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
     "@testing-library/dom": "^10.2.0",
