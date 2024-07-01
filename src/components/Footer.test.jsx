@@ -10,7 +10,7 @@ describe("Renders the Footer component when the Game is in the initial state", (
     const footerTimer = screen.queryByTestId("timer");
     expect(footerTimer).toHaveTextContent(15);
 
-    const footerStartButton = screen.queryByTestId("start_buttom");
+    const footerStartButton = screen.queryByTestId("start_button");
     expect(footerStartButton).toHaveTextContent("Start");
   });
 });
