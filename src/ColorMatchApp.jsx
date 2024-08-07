@@ -15,17 +15,17 @@ function ColorMatchApp() {
     console.log('Start button clicked')
   }
 
+  const numbers = [8, 5, 12, 13, 5, 16];
+  const renderNumberButtons = numbers.map((number) => 
+    <MemoizedNumberButton key={number} number={number} />
+  );
+
   return (
     <div className='game'>
       <MemoizedHelp />
       <div className='target'>42</div>
       <div className='challenge-numbers'>
-        <MemoizedNumberButton number={8} />
-        <MemoizedNumberButton number={5} />
-        <MemoizedNumberButton number={12} />
-        <MemoizedNumberButton number={13} />
-        <MemoizedNumberButton number={5} />
-        <MemoizedNumberButton number={16} />
+        {renderNumberButtons}
       </div>
       <Footer timerValue={countdown} onStartClick={onStartClick} />
     </div>
