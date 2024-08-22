@@ -9,7 +9,7 @@ function Footer({ timerValue, onStartClick }) {
   return (
     <div className='footer'>
       <div className='timer-value' data-testid='timer'>{timerValue}</div>
-      <button data-testid='start_button' onClick={() => onStartClick} >Start</button>
+      <button data-testid='start_button' onClick={onStartClick}>Start</button>
     </div>
   );
 }

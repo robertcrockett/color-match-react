@@ -9,15 +9,15 @@ import useCountdown from "./hooks/useCountdown";
  * @returns A JSX object representing the Color Match application
  */
 function ColorMatchApp() {
-  const countdown = useCountdown(15);
+  const { countdown, start, pause } = useCountdown(15);
 
   const onStartClick = () => {
-    console.log('Start button clicked')
+    start();
   }
 
   const numbers = [8, 5, 12, 13, 5, 16];
-  const renderNumberButtons = numbers.map((number) => 
-    <MemoizedNumberButton key={number} number={number} />
+  const renderNumberButtons = numbers.map((number, index) => 
+    <MemoizedNumberButton key={index} number={number} />
   );
 
   return (
