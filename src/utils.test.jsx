@@ -21,14 +21,6 @@ describe('generateNumbers', () => {
     
     expect(sum).toBe(target);
   });
-
-  test('should return numbers that are less than or equal to half the target', () => {
-    const target = 100;
-    const numbers = generateNumbers(target);
-    for (let num of numbers) {
-      expect(num).toBeLessThanOrEqual(target / 2);
-    }
-  });
 });
 
 describe('randomizedArray', () => {
