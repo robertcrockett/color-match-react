@@ -1,3 +1,7 @@
+/**
+ * Generates a randomized array of numbers using the Fisher-Yates shuffle algorithm.
+ * @returns {number[]} The randomized array of numbers.
+ */
 export function randomizedArray() { 
   const numbers = generateNumbers(42);
 
