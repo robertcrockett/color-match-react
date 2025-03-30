@@ -14,8 +14,8 @@
   },
   "dependencies": {
     "jsdom": "^26.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.27.0",
